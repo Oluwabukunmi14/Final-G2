@@ -1,9 +1,10 @@
-let cart = 0
+let cart = 1
   
   const carts = document.querySelector('.fa-solid')
+  
   const button = document.querySelectorAll('.submit').forEach(button =>{
     
-    carts.innerHTML = cart
+   
     button.addEventListener('click',() =>{
       carts.innerHTML = cart++
   })
