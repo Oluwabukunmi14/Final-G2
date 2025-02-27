@@ -1,133 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/07b17419ab.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/07b17419ab.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <nav>
-        <div class="logo">
-            <a href="#"><h1>G2 ELECTRONICS</h1></a>
-        </div>
+      <div class="logo">
+        <a href="#"><h1>G2 ELECTRONICS</h1></a>
+      </div>
 
-        <div class="search-btn">
-            <input type="text" placeholder="Search for Items">
-            <button>Search</button>
-        </div>
+      <div class="search-btn">
+        <input type="text" placeholder="Search for Items" />
+        <button>Search</button>
+      </div>
 
-        <div class="nav-list">
-            <ul>
-                <a href="../index.html">
-                    <li>Home</li>
-                </a>
-                
-                <a href="../about-page/about.html">
-                    <li>About</li>
-                </a>
-                <a href="../Carts/index.html">
-                    <li>FAQ</li>
-                </a>
-                <a href="./logins/login.html">
-                    <li>Sign up</li>
-                </a>
-            </ul>
-        </div>
+      <div class="nav-list">
+        <ul>
+          <a href="../index.html">
+            <li>Home</li>
+          </a>
+
+          <a href="../about-page/about.html">
+            <li>About</li>
+          </a>
+          <a href="../Carts/index.html">
+            <li>FAQ</li>
+          </a>
+          <a href="./logins/login.html">
+            <li>Sign up</li>
+          </a>
+        </ul>
+      </div>
     </nav>
     <main>
+      <div id="cart-section">
         <div id="cart-section">
-            <h2>Cart</h2>
-            <div id="cart-items"></div>
-          </div>
+          <h2>Cart</h2>
+          <div id="cart-items"></div>
+          <p>Total: <span id="cart-total">₦0</span></p>
+          <button onclick="checkout()">Proceed to Checkout</button>
+
+        </div>
+
+        <!-- <div class="product-container">
+          <div class="product-card">
+            <img
+              src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/07/8432202/1.jpg?4382"
+              alt="Binatone Stand Fan"
+            />
+            <h3>Binatone Stand Fan</h3>
+            <p>₦123,000</p>
+            <div class="cart-actions">
+              <button id="increase-${index}">+</button>
+              <button id="decrease-${index}">-</button>
+              <button id="remove-${index}">🗑</button>
+            </div>
+          </div> -->
+        </div>
+      </div>
     </main>
     <footer>
-        <div class="footer-cnt-1">
-
-            <div class="customer-sv">
-                <h4>Customer Service</h4>
-                <ul>
-                    <div class="fst-lsit">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Shipping Information</a></li>
-                        <li><a href="#">Returns & Exchanges</a></li>
-                    </div>
-
-                    <div class="snd-list">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Warranty & Repairs</a></li>
-                    </div>
-                   
-                </ul>
+      <div class="footer-cnt-1">
+        <div class="customer-sv">
+          <h4>Customer Service</h4>
+          <ul>
+            <div class="fst-lsit">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Shipping Information</a></li>
+              <li><a href="#">Returns & Exchanges</a></li>
             </div>
 
-            <div class="socials">
-                <h4>Follow Us</h4>
-                
-                <ul>
-                    <div class="social-ctn1">
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-facebook"></i>
-                                Facebook
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-square-instagram"></i>
-                                Instagram
-                            </a>
-                        </li>
-                    </div>
-
-                    <div class="social-ctn2">
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-square-x-twitter"></i>
-                                Twitter
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-youtube"></i>
-                                Youtube
-                            </a>
-                        </li>
-                    </div>
-                    
-                </ul>
+            <div class="snd-list">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Warranty & Repairs</a></li>
             </div>
-
-            <div class="patment-opt">
-                <h4>Secure Payment Options</h4>
-                <p>We offer safe and secure payment options for your peace of mind.</p>
-
-                <img src="https://icon-library.com/images/paypal-credit-card-icon/paypal-credit-card-icon-11.jpg" alt="">
-            </div>
-
-            <div class="address">
-                <h4>Store Address</h4>
-                <p>Visit us at: <br><br>123 New Horizon Tech Avenue, Suite 100
-                    Gadget City, Ikeja, Lagos Nigeria
-                </p>
-            </div>
+          </ul>
         </div>
 
-        <div class="footer-cnt-2">
-            <P>&#169; 2025 Copyright: G2 ELECTRONICS</P>
+        <div class="socials">
+          <h4>Follow Us</h4>
+
+          <ul>
+            <div class="social-ctn1">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-square-instagram"></i>
+                  Instagram
+                </a>
+              </li>
+            </div>
+
+            <div class="social-ctn2">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-square-x-twitter"></i>
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                  Youtube
+                </a>
+              </li>
+            </div>
+          </ul>
         </div>
+
+        <div class="patment-opt">
+          <h4>Secure Payment Options</h4>
+          <p>
+            We offer safe and secure payment options for your peace of mind.
+          </p>
+
+          <img
+            src="https://icon-library.com/images/paypal-credit-card-icon/paypal-credit-card-icon-11.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="address">
+          <h4>Store Address</h4>
+          <p>
+            Visit us at: <br /><br />123 New Horizon Tech Avenue, Suite 100
+            Gadget City, Ikeja, Lagos Nigeria
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-cnt-2">
+        <p>&#169; 2025 Copyright: G2 ELECTRONICS</p>
+      </div>
     </footer>
 
-   <script src="./cart.js"></script>     
-</body>
+    <script src="./cart.js"></script>
+  </body>
 </html>
-        
